@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiawei Liu | Design & Chaos</title>
+    
+    <!-- 1. 引入 Tailwind CSS (样式引擎) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. 引入 React 和 Babel (核心框架) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 3. 自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                        serif: ['Times New Roman', 'serif'], 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 隐藏滚动条但保留功能 */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-black text-white m-0 p-0">
+
+    <!-- React 挂载点 -->
+    <div id="root"></div>
+
+    <!-- 我们的 React 代码写在这里 -->
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        /* --- 图标组件 (SVG) --- */
+        const IconArrowDown = ({size=24, className}) => <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>;
+        const IconArrowRight = ({size=24, className}) => <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>;
+        const IconMail = ({size=24, className}) => <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>;
+        const IconLinkedin = ({size=24, className}) => <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>;
+        const IconInstagram = ({size=24, className}) => <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>;
+
+        /* --- 文字乱码动效组件 --- */
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
+        const randomChar = () => chars[Math.floor(Math.random() * chars.length)];
+
+        const TextScramble = ({ text, className, trigger }) => {
+            const [display, setDisplay] = useState(text);
+            
+            useEffect(() => {
+                let iteration = 0;
+                const interval = setInterval(() => {
+                    setDisplay(text.split("").map((letter, index) => {
+                        if (index < iteration) return text[index];
+                        return randomChar();
+                    }).join(""));
+                    if (iteration >= text.length) clearInterval(interval);
+                    iteration += 1 / 3; 
+                }, 30);
+                return () => clearInterval(interval);
+            }, [text, trigger]);
+            return <span className={className}>{display}</span>;
+        };
+
+        /* --- 核心视频组件 --- */
+        const ChaosSphere = () => {
+            return (
+                <div className="w-full h-full flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-700">
+                    <video 
+                        src="./chaos.mp4" 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                        className="w-full h-full object-contain mix-blend-screen"
+                    >
+                    </video>
+                </div>
+            );
+        };
+
+        /* --- 主程序 --- */
+        const Portfolio = () => {
+            const theme = 'dark';
+            const [scrollProgress, setScrollProgress] = useState(0);
+
+            useEffect(() => {
+                const handleScroll = () => {
+                    const totalScroll = document.documentElement.scrollTop;
+                    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scroll = totalScroll / windowHeight || 0;
+                    setScrollProgress(scroll);
+                };
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            // 颜色变量固定
+            const bgColor = 'bg-[#000000]';
+            const textColor = 'text-zinc-100';
+            const accentColor = 'text-zinc-500';
+            const cardBg = 'bg-zinc-900/30';
+            const navBg = 'bg-black/0'; 
+
+            const scrollToSection = (id) => {
+                const element = document.getElementById(id);
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+            };
+
+            const projects = [
+                { 
+                    id: 1, 
+                    title: "Fruit of their love", 
+                    desc: "A dark-room installation confronting data exposure and digital surveillance. Six suspended figures display fragments of algorithm-derived “inner monologues,” positioning the audience as both witness and observer within an uneasy technological gaze.", 
+                    type: "Interactive Installation, Sensor-Driven Art",
+                    img: "./p1.jpg"
+                },
+                { 
+                    id: 2, 
+                    title: "The hanging of technology", 
+                    desc: "A dark-room installation confronting data exposure and digital surveillance. Six suspended figures display fragments of algorithm-derived “inner monologues,” positioning the audience as both witness and observer within an uneasy technological gaze.", 
+                    type: "Interactive Installation, Critical Design",
+                    img: "./p2.jpg"
+                },
+                { 
+                    id: 3, 
+                    title: "Whisperfield", 
+                    desc: "An AI-driven ambient landscape built inside the Cube. Whisperfield shifts with audience movement and sensory input, creating a slow, responsive environment designed to support focus, grounding, and neurodiverse comfort.", 
+                    type: "Multisensory Space, Neurodiverse Design",
+                    img: "./p3.jpg"
+                },
+                { 
+                    id: 4, 
+                    title: "CoLab", 
+                    desc: "A course-based team-matching platform that helps university students form compatible groups through skill profiles, shared goals, and structured collaboration. CoLab streamlines lecture–tutorial interaction with focused discussion, resource sharing, and simple project tracking.", 
+                    type: "EdTech Product, UX & Interaction Design",
+                    img: "./p4.jpg"
+                },
+                { 
+                    id: 5, 
+                    title: "The Foodark System", 
+                    desc: "A service design system that redirects unsold fresh food to low-income and refugee families through verified retailers, smart distribution points, and a dual-sided mobile platform. Foodark reduces waste while improving access, dignity, and community support.", 
+                    type: "Service Design, Sustainability",
+                    img: "./p5.jpg"
+                },
+                { 
+                    id: 6, 
+                    title: "City2Surf App", 
+                    desc: "A post-race data and sharing app for the City2Surf virtual run. It visualizes pace, heart rate, and race insights while offering an AI-powered poster generator to help runners celebrate and share their results.", 
+                    type: "Interaction Design, Fitness App",
+                    img: "./p6.jpg"
+                },
+                { 
+                    id: 7, 
+                    title: "Echo Frame", 
+                    desc: "A browser plugin for deaf and hard-of-hearing viewers that adds live captions and sound cues to streaming video. It converts speech and key sound events into on-screen text and visual icons, making game streams, lectures, and calls accessible without changing the original platform.", 
+                    type: "Accessibility, Assistive Technology",
+                    img: null 
+                },
+                { 
+                    id: 8, 
+                    title: "Still Here", 
+                    desc: "A private digital space for messages that should only be delivered when you’re no longer able to send them yourself. The system uses inactivity patterns, trusted contacts, and timed verification to release your final messages safely and respectfully.", 
+                    type: "Digital Legacy, Emotional Technology",
+                    img: null 
+                },
+            ];
+
+            return (
+                <div className={`min-h-[300vh] w-full ${bgColor} ${textColor} transition-colors duration-700 font-sans selection:bg-white selection:text-black`}>
+                    
+                    {/* NAV */}
+                    <nav className={`fixed top-0 left-0 w-full px-6 py-6 md:px-12 md:py-8 flex justify-between items-center z-50 mix-blend-difference ${navBg} backdrop-blur-sm transition-all duration-500`}>
+                        <div className="flex flex-col cursor-pointer relative z-10" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+                            <span className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-white">Jiawei Liu</span>
+                            <span className="text-[10px] md:text-xs font-mono opacity-60 tracking-wider text-white">Design & Chaos</span>
+                        </div>
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex gap-12">
+                            {['Identity', 'Projects', 'Traces', 'Contact'].map((item) => (
+                                <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className="relative group py-1">
+                                    <span className="text-sm font-mono tracking-[0.15em] uppercase text-white opacity-80 group-hover:opacity-100 transition-opacity">{item}</span>
+                                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                                </button>
+                            ))}
+                        </div>
+                        <div className="w-8"></div> 
+                    </nav>
+
+                    {/* SECTION 1: HERO */}
+                    <section className="h-screen w-full relative flex flex-col items-center justify-center overflow-hidden">
+                        <div className="relative z-0 w-full h-full flex items-center justify-center transition-transform duration-1000 ease-out" style={{ transform: `scale(${1 + scrollProgress * 0.3})` }}>
+                            <ChaosSphere />
+                        </div>
+                        <div className={`absolute bottom-[20%] left-0 w-full z-10 text-center transition-all duration-700 ${scrollProgress > 0.05 ? 'opacity-0 translate-y-10' : 'opacity-100'}`}>
+                            <p className="text-sm md:text-base font-serif italic tracking-widest text-zinc-400">Structure comes from chaos</p>
+                        </div>
+                        <div className={`absolute bottom-12 animate-pulse transition-opacity duration-500 ${scrollProgress > 0.1 ? 'opacity-0' : 'opacity-40'}`}>
+                            <IconArrowDown size={24} />
+                        </div>
+                    </section>
+
+                    {/* SECTION 2: IDENTITY */}
+                    <section id="identity" className="relative z-10 w-full min-h-screen flex flex-col justify-center py-24 px-6 md:px-24">
+                        <div className="max-w-6xl mx-auto w-full">
+                            <div className="flex items-center gap-4 mb-12 opacity-50">
+                                <span className="text-xs font-mono uppercase tracking-widest">01 / Identity</span>
+                                <div className="h-[1px] w-12 bg-current"></div>
+                            </div>
+                            <div className="mb-24">
+                                <h2 className="text-3xl md:text-5xl font-light leading-snug max-w-4xl">
+                                    I am <TextScramble text="Jiawei Liu" className="font-bold" trigger={scrollProgress > 0.15}/>.
+                                </h2>
+                                <p className="mt-6 text-lg md:text-2xl font-light opacity-80 leading-relaxed max-w-4xl">
+                                    Designer and Developer working across digital product, spatial experience, interaction systems, and generative aesthetics. I explore how <span className="italic font-serif">order emerges from instability</span>, translating intuition, data, and sensing technologies into immersive installations and digital products.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 border-t border-current/10 pt-12">
+                                <div>
+                                    <h3 className="text-xs font-mono uppercase tracking-widest mb-6 opacity-50">Current Focus</h3>
+                                    <div className="mb-2"><span className="text-xl md:text-2xl font-medium block">Chaos Studio</span></div>
+                                    <p className="text-sm opacity-80 leading-relaxed max-w-xs">Multisensory installation design, interactive environments, digital product, UI/UX</p>
+                                </div>
+                                <div>
+                                    <h3 className="text-xs font-mono uppercase tracking-widest mb-6 opacity-50">Academic Path</h3>
+                                    <div className="mb-8 group">
+                                        <div className="flex items-baseline gap-2 mb-1"><span className="text-xs font-mono opacity-50">2024-2026</span></div>
+                                        <p className="font-medium text-lg">Master of Interaction Design</p>
+                                        <p className={`${accentColor} text-sm`}>University of Sydney</p>
+                                    </div>
+                                    <div className="group">
+                                        <div className="flex items-baseline gap-2 mb-1"><span className="text-xs font-mono opacity-50">2017-2021</span></div>
+                                        <p className="font-medium text-lg">Visual Communication Design</p>
+                                        <p className={`${accentColor} text-sm`}>Shandong University of Science and Technology</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 className="text-xs font-mono uppercase tracking-widest mb-6 opacity-50">Tech Stack</h3>
+                                    <div className="flex flex-wrap gap-2">
+                                        {['Cinema 4D + Octane', 'Adobe Suite', 'Figma', 'Unreal Engine 5', 'TouchDesigner', 'AIGC Creator'].map((tech) => (
+                                            <span key={tech} className="px-3 py-1.5 border border-current/20 text-xs uppercase tracking-wide hover:bg-white hover:text-black transition-colors cursor-default">{tech}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECTION 3: PROJECTS */}
+                    <section id="projects" className="relative z-10 w-full min-h-screen py-24 px-6 md:px-24 border-t border-current/10 bg-gradient-to-b from-transparent to-current/5">
+                        <div className="max-w-7xl mx-auto w-full">
+                            <div className="flex items-center justify-between mb-24">
+                                <div className="flex items-center gap-4 opacity-50">
+                                    <span className="text-xs font-mono uppercase tracking-widest">02 / Projects</span>
+                                    <div className="h-[1px] w-12 bg-current"></div>
+                                </div>
+                                <span className="text-xs font-mono uppercase opacity-30">Selected Works</span>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+                                {projects.map((project) => (
+                                    <div key={project.id} className="group cursor-pointer flex flex-col gap-6">
+                                        {/* Image Container */}
+                                        <div className={`w-full aspect-[16/9] overflow-hidden relative ${!project.img ? 'border border-dashed border-zinc-700' : 'bg-zinc-800'}`}>
+                                            {project.img ? (
+                                                <div className="w-full h-full bg-zinc-800 group-hover:bg-zinc-700 transition-colors duration-500 overflow-hidden">
+                                                    <img src={project.img} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 hover:opacity-100" />
+                                                </div>
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center bg-transparent">
+                                                    <span className="text-xs font-mono opacity-40 uppercase tracking-widest">[ Coming Soon ]</span>
+                                                </div>
+                                            )}
+                                            <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300 pointer-events-none"></div>
+                                        </div>
+
+                                        {/* Content Container */}
+                                        <div className="flex flex-col gap-3">
+                                            {/* Title */}
+                                            <h4 className="text-2xl md:text-3xl font-light tracking-tight group-hover:italic transition-all duration-300">{project.title}</h4>
+                                            
+                                            {/* Tags (New Design) */}
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.type.split(',').map((tag, idx) => (
+                                                    <span key={idx} className="px-3 py-1 text-xs font-mono border border-zinc-800 rounded-full text-zinc-400 group-hover:border-zinc-600 group-hover:text-zinc-200 transition-colors">
+                                                        {tag.trim()}
+                                                    </span>
+                                                ))}
+                                            </div>
+
+                                            {/* Description - Removed line-clamp, increased breathing room */}
+                                            <p className={`text-sm md:text-base leading-loose ${accentColor} mt-2 group-hover:text-zinc-300 transition-colors duration-300`}>
+                                                {project.desc}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="mt-24 flex justify-center">
+                                <a href="#" className="flex items-center gap-3 group opacity-60 hover:opacity-100 transition-opacity">
+                                    <span className="text-xs font-mono tracking-widest uppercase border-b border-transparent group-hover:border-current pb-1 transition-all">All Archives</span>
+                                    <IconArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECTION 4: TRACES */}
+                    <section id="traces" className="relative z-10 w-full min-h-[50vh] py-24 px-6 md:px-24 border-t border-current/10">
+                        <div className="max-w-6xl mx-auto w-full">
+                            <div className="flex items-center gap-4 mb-16 opacity-50">
+                                <span className="text-xs font-mono uppercase tracking-widest">03 / Traces</span>
+                                <div className="h-[1px] w-12 bg-current"></div>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                                {[1, 2, 3].map((i) => (
+                                    <div key={i} className={`h-40 border-l border-current/20 pl-6 flex flex-col justify-end pb-4 group hover:border-current transition-colors ${cardBg}`}>
+                                        <span className="text-xs font-mono opacity-40 mb-2">xx.xx.xxxx</span>
+                                        <p className="text-sm font-light italic">"Coming soon..."</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex justify-start">
+                                <a href="#" className="flex items-center gap-2 group opacity-60 hover:opacity-100 transition-opacity">
+                                    <span className="text-xs font-mono tracking-widest uppercase border-b border-transparent group-hover:border-current pb-1 transition-all">Explore Traces</span>
+                                    <IconArrowRight size={14} className="group-hover:translate-x-1 transition-transform"/>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECTION 5: CONTACT */}
+                    <section id="contact" className="relative z-10 w-full py-32 px-6 md:px-24 border-t border-current/10 bg-zinc-900/20">
+                        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+                            <h2 className="text-4xl md:text-8xl font-bold mb-8 tracking-tighter">LET'S COLLIDE</h2>
+                            <p className="text-lg md:text-xl font-light opacity-70 mb-12 max-w-xl mx-auto">Open for collaborations, commissions, and chaotic conversations.</p>
+                            <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
+                                <a href="mailto:example@email.com" className="flex flex-col items-center gap-3 group opacity-70 hover:opacity-100 transition-all">
+                                    <div className="p-4 border border-current rounded-full group-hover:bg-white group-hover:text-black transition-colors"><IconMail size={24} /></div>
+                                    <span className="text-xs font-mono tracking-widest uppercase">Email</span>
+                                </a>
+                                <a href="#" className="flex flex-col items-center gap-3 group opacity-70 hover:opacity-100 transition-all">
+                                    <div className="p-4 border border-current rounded-full group-hover:bg-white group-hover:text-black transition-colors"><IconLinkedin size={24} /></div>
+                                    <span className="text-xs font-mono tracking-widest uppercase">LinkedIn</span>
+                                </a>
+                                <a href="#" className="flex flex-col items-center gap-3 group opacity-70 hover:opacity-100 transition-all">
+                                    <div className="p-4 border border-current rounded-full group-hover:bg-white group-hover:text-black transition-colors"><IconInstagram size={24} /></div>
+                                    <span className="text-xs font-mono tracking-widest uppercase">Instagram</span>
+                                </a>
+                            </div>
+                            <div className="mt-32 w-full flex justify-between items-end text-[10px] md:text-xs font-mono opacity-30 uppercase border-t border-current/10 pt-8">
+                                <span>Sydney, Australia</span>
+                                <span>Chaos Studio © 2025 Jiawei Liu</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Portfolio />);
+    </script>
+</body>
+</html>

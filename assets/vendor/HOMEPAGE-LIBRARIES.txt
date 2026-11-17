@@ -1,0 +1,19 @@
+Homepage libraries are distributed locally to avoid third-party CDN requests.
+
+React 18.3.1 (production UMD build)
+Source: https://unpkg.com/react@18.3.1/umd/react.production.min.js
+License: MIT; see react-18.3.1.LICENSE.txt
+
+ReactDOM 18.3.1 (production UMD build)
+Source: https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js
+License: MIT; see react-dom-18.3.1.LICENSE.txt
+
+Babel standalone 7.26.10 (authoring compiler only; not requested by the browser)
+Source: https://unpkg.com/@babel/standalone@7.26.10/babel.min.js
+License: MIT; see babel-7.26.10.LICENSE.txt
+
+Tailwind CSS browser runtime 3.4.17
+Source: https://cdn.tailwindcss.com/3.4.17
+License: MIT; see tailwind-3.4.17.LICENSE.txt
+
+Original distribution files and license notices are retained without modification.

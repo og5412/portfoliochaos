@@ -1,0 +1,512 @@
+{
+  "provider": "ambientCG official",
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "raw_sources_root": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources",
+  "raw_download_receipt": "ambientcg-download-receipt.json",
+  "web_bytes_total": 4990580,
+  "web_megabytes_decimal": 4.99058,
+  "five_megabyte_budget_pass": true,
+  "maps": [
+    {
+      "role": "body",
+      "map": "color",
+      "provider_asset": "Concrete037",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete037",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete037_2K-JPG\\Concrete037_2K-JPG_Color.jpg",
+      "source_sha256": "5a854a2aa06d69762eb194f25e98b164c8432ef0fc83ba60748f9c21ac77d1d6",
+      "source_bytes": 6807955,
+      "source_dimensions": [
+        2048,
+        2048
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-body-color.jpg",
+      "web_filename": "concrete-body-color.jpg",
+      "web_sha256": "9bf01334cc5f4a8c211920c622688f119c418cd8401b8a68595e3a969157e3f2",
+      "web_bytes": 1444397,
+      "web_dimensions": [
+        2048,
+        2048
+      ],
+      "encoding": {
+        "quality": 85,
+        "subsampling": 2,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "RGB",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    },
+    {
+      "role": "body",
+      "map": "normal",
+      "provider_asset": "Concrete037",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete037",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete037_1K-JPG\\Concrete037_1K-JPG_NormalGL.jpg",
+      "source_sha256": "2f86c599eb76ab412591025ba4b89c1d87cd196807ed02738041dc9490fc17a8",
+      "source_bytes": 2399017,
+      "source_dimensions": [
+        1024,
+        1024
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-body-normal.jpg",
+      "web_filename": "concrete-body-normal.jpg",
+      "web_sha256": "f285e5045fd0162a0eabdbf3871afdadd1478dadee4d36dd54977e653daa63c8",
+      "web_bytes": 1248409,
+      "web_dimensions": [
+        1024,
+        1024
+      ],
+      "encoding": {
+        "quality": 94,
+        "subsampling": 0,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "RGB",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale.",
+      "normal_encoding_error": {
+        "mean_degrees": 2.6758460998535156,
+        "p95_degrees": 5.5027079582214355,
+        "p99_degrees": 7.131855010986328,
+        "max_degrees": 15.28779125213623,
+        "normal_channels_preserved": "OpenGL RGB; no Y flip, no channel swap, no artistic changes."
+      }
+    },
+    {
+      "role": "body",
+      "map": "roughness",
+      "provider_asset": "Concrete037",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete037",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete037_1K-JPG\\Concrete037_1K-JPG_Roughness.jpg",
+      "source_sha256": "d02f4176e000b2fb384d70f8f867fd584ce1feceee2287d68a53cc6fa4600ef8",
+      "source_bytes": 796353,
+      "source_dimensions": [
+        1024,
+        1024
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-body-roughness.jpg",
+      "web_filename": "concrete-body-roughness.jpg",
+      "web_sha256": "0d6e44e515ed305ee3b6fc0e9278962a94bfc1e135cbef43308c73171d7c7226",
+      "web_bytes": 374027,
+      "web_dimensions": [
+        1024,
+        1024
+      ],
+      "encoding": {
+        "quality": 90,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "L",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    },
+    {
+      "role": "body",
+      "map": "ao",
+      "provider_asset": "Concrete037",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete037",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete037_1K-JPG\\Concrete037_1K-JPG_AmbientOcclusion.jpg",
+      "source_sha256": "44f1b5f5deee3beff26b515d30ce7e1ff93b2f3de1172f2bc74e3f91553cd6c0",
+      "source_bytes": 750886,
+      "source_dimensions": [
+        1024,
+        1024
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-body-ao.jpg",
+      "web_filename": "concrete-body-ao.jpg",
+      "web_sha256": "3fc901d0afdc006dbbd537f8f0172fbe3eee754c70149170dbe3bffa5eb94530",
+      "web_bytes": 329721,
+      "web_dimensions": [
+        1024,
+        1024
+      ],
+      "encoding": {
+        "quality": 90,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "L",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    },
+    {
+      "role": "floor",
+      "map": "color",
+      "provider_asset": "Concrete048",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete048",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete048_1K-JPG\\Concrete048_1K-JPG_Color.jpg",
+      "source_sha256": "1bf2156b86866732660e6d3ccd1942598ac2b9e73a9bb97a23763574ac4d7722",
+      "source_bytes": 1126366,
+      "source_dimensions": [
+        1024,
+        1024
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-floor-color.jpg",
+      "web_filename": "concrete-floor-color.jpg",
+      "web_sha256": "8108ebbc7c465c170173f3a736777d5e01654570fa5fcf9a9bd37df0d94d8677",
+      "web_bytes": 175533,
+      "web_dimensions": [
+        1024,
+        1024
+      ],
+      "encoding": {
+        "quality": 85,
+        "subsampling": 2,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "RGB",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    },
+    {
+      "role": "floor",
+      "map": "normal",
+      "provider_asset": "Concrete048",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete048",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete048_1K-JPG\\Concrete048_1K-JPG_NormalGL.jpg",
+      "source_sha256": "16d110670d8a1ca4dd85d498bb46afaa6953456878dae7ab6717053600dddcfc",
+      "source_bytes": 1548946,
+      "source_dimensions": [
+        1024,
+        1024
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-floor-normal.jpg",
+      "web_filename": "concrete-floor-normal.jpg",
+      "web_sha256": "9493637fef6d8d512ab474107602820a9d553caaee0542fd52b788c6dd81dc1e",
+      "web_bytes": 456333,
+      "web_dimensions": [
+        1024,
+        1024
+      ],
+      "encoding": {
+        "quality": 94,
+        "subsampling": 0,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "RGB",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale.",
+      "normal_encoding_error": {
+        "mean_degrees": 1.921209454536438,
+        "p95_degrees": 3.9917564392089844,
+        "p99_degrees": 5.238206386566162,
+        "max_degrees": 13.90564250946045,
+        "normal_channels_preserved": "OpenGL RGB; no Y flip, no channel swap, no artistic changes."
+      }
+    },
+    {
+      "role": "floor",
+      "map": "roughness",
+      "provider_asset": "Concrete048",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete048",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete048_1K-JPG\\Concrete048_1K-JPG_Roughness.jpg",
+      "source_sha256": "cf9b741e1ffc25b89a7d7a8971656463009c25b30c3fd300b3296c60daef729f",
+      "source_bytes": 702183,
+      "source_dimensions": [
+        1024,
+        1024
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-floor-roughness.jpg",
+      "web_filename": "concrete-floor-roughness.jpg",
+      "web_sha256": "a93ad6d9e218d71ae8b6b55a1a8cadfca762300216d3016b0d4fa35b159a7a5d",
+      "web_bytes": 303978,
+      "web_dimensions": [
+        1024,
+        1024
+      ],
+      "encoding": {
+        "quality": 90,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "L",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    },
+    {
+      "role": "floor",
+      "map": "ao",
+      "provider_asset": "Concrete048",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete048",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete048_1K-JPG\\Concrete048_1K-JPG_AmbientOcclusion.jpg",
+      "source_sha256": "4d1f849c3a7881e6b634616918f6a4c0c2defe67529d05c5809084e36a9fbbe7",
+      "source_bytes": 659489,
+      "source_dimensions": [
+        1024,
+        1024
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-floor-ao.jpg",
+      "web_filename": "concrete-floor-ao.jpg",
+      "web_sha256": "4f6deb2f9b70cd20bcc78ba97880caf69d33745fac72400983b1a941b4b86fb0",
+      "web_bytes": 260922,
+      "web_dimensions": [
+        1024,
+        1024
+      ],
+      "encoding": {
+        "quality": 90,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "L",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    },
+    {
+      "role": "wall",
+      "map": "color",
+      "provider_asset": "Concrete034",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete034",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete034_1K-JPG\\Concrete034_1K-JPG_Color.jpg",
+      "source_sha256": "8ceb9186d990b31fce785e06fdc6974c160f1d27c43f6160266f164deba713aa",
+      "source_bytes": 269501,
+      "source_dimensions": [
+        1024,
+        512
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-wall-color.jpg",
+      "web_filename": "concrete-wall-color.jpg",
+      "web_sha256": "eef8ec04787ff3fe1a7db3b89c42bca315bf0e577a2f4659a286e154a086ef44",
+      "web_bytes": 61365,
+      "web_dimensions": [
+        1024,
+        512
+      ],
+      "encoding": {
+        "quality": 85,
+        "subsampling": 2,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "RGB",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    },
+    {
+      "role": "wall",
+      "map": "normal",
+      "provider_asset": "Concrete034",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete034",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete034_1K-JPG\\Concrete034_1K-JPG_NormalGL.jpg",
+      "source_sha256": "e509eb9dfa978e780fbebfd2acacc2ce158b5b7ced722ddc0759039dd51e18ca",
+      "source_bytes": 821681,
+      "source_dimensions": [
+        1024,
+        512
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-wall-normal.jpg",
+      "web_filename": "concrete-wall-normal.jpg",
+      "web_sha256": "471501f9e6be4c048a29ad567ee1d092a6930e241ec1778d08a15b4a88dffa56",
+      "web_bytes": 269489,
+      "web_dimensions": [
+        1024,
+        512
+      ],
+      "encoding": {
+        "quality": 94,
+        "subsampling": 0,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "RGB",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale.",
+      "normal_encoding_error": {
+        "mean_degrees": 1.955259084701538,
+        "p95_degrees": 4.163613796234131,
+        "p99_degrees": 5.477672576904297,
+        "max_degrees": 11.576411247253418,
+        "normal_channels_preserved": "OpenGL RGB; no Y flip, no channel swap, no artistic changes."
+      }
+    },
+    {
+      "role": "wall",
+      "map": "roughness",
+      "provider_asset": "Concrete034",
+      "official_asset_url": "https://ambientcg.com/view?id=Concrete034",
+      "source_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\analysis\\material-sources\\Concrete034_1K-JPG\\Concrete034_1K-JPG_Roughness.jpg",
+      "source_sha256": "a4a9e39857a19afd23a778e5abf44fcdf6bd7f93918f1cf6878b41933e553511",
+      "source_bytes": 217708,
+      "source_dimensions": [
+        1024,
+        512
+      ],
+      "web_path": "C:\\Users\\11726\\Documents\\ChatGPT\\个人网站\\portfoliochaos\\assets\\fruit\\materials\\concrete-wall-roughness.jpg",
+      "web_filename": "concrete-wall-roughness.jpg",
+      "web_sha256": "754e5dbcfd40be6a32038d3e97b933d240f175c4ad3bb9cb54c32398478b6bf5",
+      "web_bytes": 66406,
+      "web_dimensions": [
+        1024,
+        512
+      ],
+      "encoding": {
+        "quality": 90,
+        "optimize": true,
+        "progressive": true
+      },
+      "output_mode": "L",
+      "license": "CC0-1.0",
+      "license_url": "https://docs.ambientcg.com/license/",
+      "source_pixels_preserved_as_reference": true,
+      "changes": "Technical JPEG encoding only; no painting, tinting, image generation, resizing or spatial filtering. Roughness/AO stored as requested grayscale."
+    }
+  ],
+  "color_statistics": {
+    "body": {
+      "source": {
+        "srgb_mean_rgb": [
+          0.6053844882166199,
+          0.5838690112781363,
+          0.5422025138343629
+        ],
+        "linear_mean_rgb_pixelwise": [
+          0.3364854708923359,
+          0.311421839899557,
+          0.2662837609925352
+        ],
+        "linear_mean_luminance": 0.3134913985539919,
+        "linear_conversion": "IEC sRGB piecewise EOTF applied per pixel before averaging."
+      },
+      "web": {
+        "srgb_mean_rgb": [
+          0.6056291056787487,
+          0.5838982311111961,
+          0.5421355069941274
+        ],
+        "linear_mean_rgb_pixelwise": [
+          0.3369440111432777,
+          0.31160344174510723,
+          0.2663530051922971
+        ],
+        "linear_mean_luminance": 0.31372376528250256,
+        "linear_conversion": "IEC sRGB piecewise EOTF applied per pixel before averaging."
+      },
+      "suggested_uniform_linear_tint_for_target_luminance": 0.6693786803524393,
+      "target_mean_linear_luminance": 0.21
+    },
+    "floor": {
+      "source": {
+        "srgb_mean_rgb": [
+          0.6356440375791776,
+          0.5958119411005295,
+          0.5293680452790881
+        ],
+        "linear_mean_rgb_pixelwise": [
+          0.3626589522749897,
+          0.3146787882145561,
+          0.24350885971247632
+        ],
+        "linear_mean_luminance": 0.31974090225606006,
+        "linear_conversion": "IEC sRGB piecewise EOTF applied per pixel before averaging."
+      },
+      "web": {
+        "srgb_mean_rgb": [
+          0.6357154098168614,
+          0.5958626391750922,
+          0.5295056810522194
+        ],
+        "linear_mean_rgb_pixelwise": [
+          0.36276523835407526,
+          0.31469445198045976,
+          0.2434677918688274
+        ],
+        "linear_mean_luminance": 0.3197717363035684,
+        "linear_conversion": "IEC sRGB piecewise EOTF applied per pixel before averaging."
+      },
+      "suggested_uniform_linear_tint_for_target_luminance": 0.4065399947560947,
+      "target_mean_linear_luminance": 0.13
+    },
+    "wall": {
+      "source": {
+        "srgb_mean_rgb": [
+          0.722827387794573,
+          0.722827387794573,
+          0.722827387794573
+        ],
+        "linear_mean_rgb_pixelwise": [
+          0.4818178904642583,
+          0.4818178904642583,
+          0.4818178904642583
+        ],
+        "linear_mean_luminance": 0.48181789046335877,
+        "linear_conversion": "IEC sRGB piecewise EOTF applied per pixel before averaging."
+      },
+      "web": {
+        "srgb_mean_rgb": [
+          0.722849767351915,
+          0.722849767351915,
+          0.722849767351915
+        ],
+        "linear_mean_rgb_pixelwise": [
+          0.4818110181290919,
+          0.4818110181290919,
+          0.4818110181290919
+        ],
+        "linear_mean_luminance": 0.48181101812817767,
+        "linear_conversion": "IEC sRGB piecewise EOTF applied per pixel before averaging."
+      },
+      "suggested_uniform_linear_tint_for_target_luminance": 0.3735904602167359,
+      "target_mean_linear_luminance": 0.18
+    }
+  },
+  "normal_encoding_error": {
+    "body": {
+      "mean_degrees": 2.6758460998535156,
+      "p95_degrees": 5.5027079582214355,
+      "p99_degrees": 7.131855010986328,
+      "max_degrees": 15.28779125213623,
+      "normal_channels_preserved": "OpenGL RGB; no Y flip, no channel swap, no artistic changes."
+    },
+    "floor": {
+      "mean_degrees": 1.921209454536438,
+      "p95_degrees": 3.9917564392089844,
+      "p99_degrees": 5.238206386566162,
+      "max_degrees": 13.90564250946045,
+      "normal_channels_preserved": "OpenGL RGB; no Y flip, no channel swap, no artistic changes."
+    },
+    "wall": {
+      "mean_degrees": 1.955259084701538,
+      "p95_degrees": 4.163613796234131,
+      "p99_degrees": 5.477672576904297,
+      "max_degrees": 11.576411247253418,
+      "normal_channels_preserved": "OpenGL RGB; no Y flip, no channel swap, no artistic changes."
+    }
+  },
+  "physical_source_dimensions": {
+    "body": null,
+    "floor": null,
+    "wall": {
+      "width_m": 1.1,
+      "height_m": 0.55
+    }
+  },
+  "physical_scale_note": "Concrete034 official source is approximately1.1m×.55m. Official pages for037/048 do not state a physical tile size; do not infer metres from pixels or DPI. Current scene is normalized to cube edge≈2.0; body repeat≈2.2 is an art scale selected by root.",
+  "wall_ao": "Not supplied by official Concrete034 package; intentionally omitted.",
+  "shader_color_space": "Color maps sRGB. NormalGL/Roughness/AO are non-color data. Decode/average color per pixel before linear tint calculations."
+}

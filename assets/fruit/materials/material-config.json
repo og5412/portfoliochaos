@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "revision": "reference-coal-17",
+  "roughnessMapping": "range-remap",
+  "textureSets": {
+    "body": {
+      "meanLinearLuminance": 0.313724,
+      "maps": {
+        "color": "concrete-body-color.jpg",
+        "normal": "concrete-body-normal.jpg",
+        "roughness": "concrete-body-roughness.jpg",
+        "ao": "concrete-body-ao.jpg"
+      }
+    },
+    "floor": {
+      "meanLinearLuminance": 0.319772,
+      "maps": {
+        "color": "concrete-floor-color.jpg",
+        "normal": "concrete-floor-normal.jpg",
+        "roughness": "concrete-floor-roughness.jpg",
+        "ao": "concrete-floor-ao.jpg"
+      }
+    },
+    "wall": {
+      "meanLinearLuminance": 0.481811,
+      "maps": {
+        "color": "concrete-wall-color.jpg",
+        "normal": "concrete-wall-normal.jpg",
+        "roughness": "concrete-wall-roughness.jpg"
+      }
+    }
+  },
+  "profiles": {
+    "cubeIntact": {
+      "textureSet": "floor",
+      "meanAlbedo": 0.12,
+      "normalStrength": 0.72,
+      "roughness": 1,
+      "roughnessRange": [
+        0.86,
+        0.99
+      ],
+      "aoStrength": 0.3,
+      "environmentStrength": 0.75,
+      "saturation": 0.05
+    },
+    "cubeTraces": {
+      "textureSet": "body",
+      "meanAlbedo": 0.11,
+      "normalStrength": 0.9,
+      "roughness": 1,
+      "roughnessRange": [
+        0.88,
+        0.995
+      ],
+      "aoStrength": 0.45,
+      "environmentStrength": 0.7,
+      "saturation": 0.035
+    },
+    "cubeEroded": {
+      "textureSet": "body",
+      "meanAlbedo": 0.105,
+      "normalStrength": 0.95,
+      "roughness": 1,
+      "roughnessRange": [
+        0.88,
+        0.995
+      ],
+      "aoStrength": 0.48,
+      "environmentStrength": 0.7,
+      "saturation": 0.025,
+      "repeat": [
+        2.8,
+        2.8
+      ]
+    },
+    "cubeFresh": {
+      "textureSet": "body",
+      "meanAlbedo": 0.17,
+      "normalStrength": 0.85,
+      "roughness": 1,
+      "roughnessRange": [
+        0.92,
+        0.995
+      ],
+      "aoStrength": 0.24,
+      "environmentStrength": 0.7,
+      "saturation": 0.025
+    },
+    "wall": {
+      "textureSet": "wall",
+      "meanAlbedo": 0.18,
+      "normalStrength": 0.2,
+      "roughness": 1,
+      "roughnessRange": [
+        0.78,
+        0.98
+      ],
+      "aoStrength": 0,
+      "environmentStrength": 1,
+      "saturation": 0.15,
+      "tileMeters": [
+        1.1,
+        0.55
+      ]
+    },
+    "floor": {
+      "textureSet": "floor",
+      "meanAlbedo": 0.13,
+      "normalStrength": 0.3,
+      "roughness": 0.96,
+      "roughnessRange": [
+        0.66,
+        0.94
+      ],
+      "aoStrength": 0.16,
+      "environmentStrength": 1.05,
+      "saturation": 0.15,
+      "tileMeters": [
+        1.6,
+        1.6
+      ]
+    },
+    "ceiling": {
+      "textureSet": "wall",
+      "meanAlbedo": 0.055,
+      "normalStrength": 0.12,
+      "roughness": 1,
+      "roughnessRange": [
+        0.84,
+        0.99
+      ],
+      "aoStrength": 0,
+      "environmentStrength": 1,
+      "saturation": 0.1,
+      "tileMeters": [
+        2.2,
+        1.1
+      ]
+    }
+  }
+}

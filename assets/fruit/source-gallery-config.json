@@ -1,0 +1,315 @@
+{
+  "source": "Actual cube.c4d FBX and measured scene-local-cube-size2.json.",
+  "coordinateSystem": "Y-up for web/GLB, floor TOP=0; native Blender(x,-z,y).",
+  "sourceScale": 0.000514811558363882,
+  "floorLift": 3.3302707068587716,
+  "cube": {
+    "position": [
+      0.015410859577184098,
+      3.3278593532338596,
+      -0.000563223876301952
+    ],
+    "rotationBasis": {
+      "v1": [
+        0.7180463046949062,
+        0.33067728379954375,
+        0.6124230876550507
+      ],
+      "v2": [
+        -0.5238558116714014,
+        0.8361156824329178,
+        0.16274413712276597
+      ],
+      "v3": [
+        -0.45824075865432057,
+        -0.4376792199416055,
+        0.7735969929745206
+      ]
+    },
+    "stage3GeometryRevision": "Original C4D source plus three localized pressure/chip edits; original archived hidden.",
+    "currentCubeGLBSHA256": "5b6eb0a13fe2c7c1c8b9194223c997fd18361aa73636cec0c96d4f51244e2af5"
+  },
+  "room": {
+    "width": 22.76232842006407,
+    "depth": 22.76232842006407,
+    "ceilingY": 7.74814796613037,
+    "floorY": 0,
+    "closed": true,
+    "wallCount": 4,
+    "addedFrontWall": {
+      "objectName": "source_wall_front_added",
+      "innerZ": 11.366442680358887,
+      "bounds": {
+        "min": [
+          -11.350739479064941,
+          -0.07968264818191528,
+          11.366442680358887
+        ],
+        "max": [
+          11.412471771240234,
+          7.7745795249938965,
+          11.393683433532715
+        ]
+      },
+      "material": "Same material datablock as source_wall_3",
+      "template": "Mirrored duplicate of source rear wall; original room dimensions retained."
+    },
+    "materialPalette": {
+      "wallsLinearRGB": [
+        0.18,
+        0.18,
+        0.18
+      ],
+      "floorLinearRGB": [
+        0.13,
+        0.13,
+        0.13
+      ],
+      "wallOriginalLinearRGB": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "floorOriginalLinearRGB": [
+        0.71,
+        0.71,
+        0.71
+      ],
+      "note": "All4walls and floor darkened in both native material and GLB baseColorFactor. Ceiling, suspension, lamp, light power/position and exposure unchanged."
+    }
+  },
+  "cameras": [
+    {
+      "name": "摄像机",
+      "position": [
+        0.05805290812916103,
+        4.272170161832051,
+        6.8984391952398445
+      ],
+      "focalLengthMM": 36.0,
+      "sensorWidthMM": 36.0,
+      "horizontalFovDegrees": 53.13010235415598,
+      "verticalFovDegrees": 31.41727565803149,
+      "forward": [
+        0.018164298911913974,
+        -0.12045808149142527,
+        -0.9925522197085874
+      ],
+      "up": [
+        0.00220407093924874,
+        0.9927184145584311,
+        -0.12043791540827094
+      ],
+      "oneUnitLookAt": [
+        0.076217207041075,
+        4.1517120803406256,
+        5.905886975531257
+      ],
+      "active": true
+    },
+    {
+      "name": "摄像机.1",
+      "position": [
+        -0.1553001234586981,
+        4.21590606653533,
+        19.92561036843469
+      ],
+      "focalLengthMM": 36.0,
+      "sensorWidthMM": 36.0,
+      "horizontalFovDegrees": 53.13010235415598,
+      "verticalFovDegrees": 31.41727565803149,
+      "forward": [
+        0.005420585911545922,
+        -0.07351535694443809,
+        -0.9972793538130164
+      ],
+      "up": [
+        0.00039957753090625914,
+        0.9972940851591029,
+        -0.0735142710258691
+      ],
+      "oneUnitLookAt": [
+        -0.14987953754715216,
+        4.142390709590892,
+        18.928331014621673
+      ],
+      "active": false
+    }
+  ],
+  "wideReviewCamera": {
+    "position": [
+      -0.014487132430076599,
+      4.253040313720703,
+      10.5
+    ],
+    "target": [
+      0.015410859137773514,
+      3.2778594493865967,
+      -0.0005632239044643939
+    ],
+    "lens": 36,
+    "sensorWidth": 36,
+    "sourceCameraDolly": 0.34,
+    "fourthWallAdjustment": "Moved only default review camera to interior webZ10.5. Original C4D camera archives unchanged."
+  },
+  "lights": [
+    {
+      "name": "灯光.1",
+      "position": [
+        0.028697026341392207,
+        6.565060178256511,
+        -0.010075587900739855
+      ],
+      "sourceTypeID": 0,
+      "type": "omni",
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relativeBrightness": 0.4,
+      "shadowTypeID": 1,
+      "sourceShadowType": "soft shadow map",
+      "falloffTypeID": 0,
+      "falloff": "none",
+      "innerConeFullDegrees": 0.0,
+      "outerConeFullDegrees": 29.999999999999996,
+      "threeSpotHalfAngleRadians": 0.2617993877991494,
+      "forward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "shadowDensity": 1.0,
+      "shadowColor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "previewEnergyWatts": 680.0
+    },
+    {
+      "name": "灯光",
+      "position": [
+        0.028697026341392207,
+        7.169078664216007,
+        -0.010075587900740058
+      ],
+      "sourceTypeID": 1,
+      "type": "spot",
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relativeBrightness": 1.0,
+      "shadowTypeID": 1,
+      "sourceShadowType": "soft shadow map",
+      "falloffTypeID": 0,
+      "falloff": "none",
+      "innerConeFullDegrees": 0.0,
+      "outerConeFullDegrees": 57.936857367429994,
+      "threeSpotHalfAngleRadians": 0.5055944596599937,
+      "forward": [
+        0.0,
+        -1.0,
+        -8.269460797427576e-16
+      ],
+      "shadowDensity": 1.0,
+      "shadowColor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "previewEnergyWatts": 1700.0
+    }
+  ],
+  "suspension": [
+    {
+      "sourceObjectIndex": 2,
+      "endpoints": [
+        [
+          -0.3910720458941183,
+          1.9839883817441462,
+          -0.3305634274370397
+        ],
+        [
+          1.3563664532562925,
+          7.760203380947113,
+          -5.013365717528367
+        ]
+      ]
+    },
+    {
+      "sourceObjectIndex": 3,
+      "endpoints": [
+        [
+          1.0774134874023664,
+          2.8662458919069382,
+          -0.2379164622790372
+        ],
+        [
+          2.6250437632347885,
+          7.754950276214249,
+          -0.16127354729090207
+        ]
+      ]
+    },
+    {
+      "sourceObjectIndex": 4,
+      "endpoints": [
+        [
+          -1.5609287885537284,
+          3.36981110127146,
+          0.27774395457185064
+        ],
+        [
+          -2.5775124534551184,
+          7.75323451841637,
+          0.6385227276205387
+        ]
+      ]
+    },
+    {
+      "sourceObjectIndex": 5,
+      "endpoints": [
+        [
+          -0.2005694268841162,
+          4.005811304329317,
+          1.4449154092830632
+        ],
+        [
+          -0.2584420930032376,
+          7.7622326369108485,
+          3.818366316774154
+        ]
+      ]
+    },
+    {
+      "sourceObjectIndex": 6,
+      "endpoints": [
+        [
+          -0.6464595393649774,
+          4.005826339627228,
+          -1.0244651461595213
+        ],
+        [
+          -1.693086119907752,
+          7.7561674335187,
+          -3.151190064331412
+        ]
+      ]
+    }
+  ],
+  "lampShadeCastsShadow": false,
+  "roomAssetBytes": 45240,
+  "previewNote": "Native preview uses calibrated inverse-square watts; source unitless no-falloff intensities are preserved in light metadata.",
+  "sourceCubeCenter": [
+    -55.74277877807617,
+    6494.216796875,
+    19.571409225463867
+  ],
+  "nativeMasterBytes": 69012353,
+  "sourceIntensityNote": "C4D no-falloff unitless intensity retained in JSON. Native preview power is inverse-square calibrated1700Wspot/680Womni.",
+  "nativeMasterSHA256": "434609460d4b2f3d7f484bc602545c55a7a6964ff38a34b80ea07d5a4e3c3ee8"
+}
